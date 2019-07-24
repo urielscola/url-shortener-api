@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import LinkController from '../controllers/LinkController';
-import LinkSchema from './schemas/LinkSchema';
+import LinkSchema from '../middlewares/schemas/LinkSchema';
 
 const routes = Router();
 

@@ -1,4 +1,4 @@
-import Link, { iLink } from '../models/Link';
+import Link, { iLink } from '../models/LinkModel';
 
 class LinkService {
   static async find(query): Promise<iLink | null> {

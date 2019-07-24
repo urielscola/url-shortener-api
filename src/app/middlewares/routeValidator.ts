@@ -1,4 +1,4 @@
-import Joi from 'joi';
+import Joi from '@hapi/joi';
 
 class RouteValidator {
   static validate(schema) {
@@ -23,7 +23,7 @@ class RouteValidator {
     } else {
       res.status(400).send({
         success: false,
-        messages: validation.error.details
+        messages: validation.error.details[0].message
       });
     }
   }

@@ -15,12 +15,13 @@ Study project heavilly inspired by services like Bit.ly.
 
 The project has, by now, those features:
 
-| Endpoint        | Method | Feature        |
-| --------------- | ------ | -------------- |
-| /               | GET    | Home           |
-| /pages/internal | GET    | Internal pages |
-| /:code          | GET    | Redirect       |
-| /api/shorten    | POST   | Shorten URL    |
+| Endpoint        | Method | Feature      |
+| --------------- | ------ | ------------ |
+| /               | GET    | Static Home  |
+| /pages/internal | GET    | Static pages |
+| /app/\*         | GET    | React app    |
+| /:code          | GET    | Redirect     |
+| /api/shorten    | POST   | Shorten URL  |
 
 # Roadmap
 

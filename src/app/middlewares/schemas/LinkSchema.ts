@@ -1,5 +1,5 @@
-import Joi from 'joi';
-import RouteValidator from '../../middlewares/RouteValidator';
+import Joi from '@hapi/joi';
+import RouteValidator from '../routeValidator';
 
 class LinkSchema extends RouteValidator {
   static get find() {

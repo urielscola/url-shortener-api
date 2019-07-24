@@ -12,9 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@hapi/joi": "^15.1.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "joi": "^14.3.1",
+    "express-async-errors": "^3.1.1",
+    "i18n": "^0.8.3",
     "mongoose": "^5.6.5",
     "shortid": "^2.2.14",
     "valid-url": "^1.0.9"
@@ -22,6 +24,8 @@
   "devDependencies": {
     "@types/cors": "^2.8.5",
     "@types/express": "^4.17.0",
+    "@types/i18n": "^0.8.5",
+    "@types/joi": "^14.3.3",
     "@types/mongodb": "^3.1.28",
     "@types/mongoose": "^5.5.9",
     "@typescript-eslint/eslint-plugin": "^1.13.0",

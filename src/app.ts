@@ -1,8 +1,10 @@
 import dotenv from 'dotenv';
 import express from 'express';
+import 'express-async-errors';
 import cors from 'cors';
-import routes from './routes';
-import { dbConnect } from './config';
+import routes from './app/routes';
+import { dbConnect, i18n } from './config';
+import { globalErrorHandler } from './app/middlewares';
 
 class App {
   public express = express.application;
@@ -19,6 +21,7 @@ class App {
   private middlewares(): void {
     this.express.use(express.json());
     this.express.use(cors());
+    this.express.use(i18n.init);
   }
 
   private async database(): Promise<void> {
@@ -27,6 +30,7 @@ class App {
 
   private routes(): void {
     this.express.use(routes);
+    this.express.use(globalErrorHandler);
   }
 }
 

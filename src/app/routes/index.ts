@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import shortenRoutes from './shorten';
-import linkRoutes from './link';
+import shortenRoutes from './shortenRoutes';
+import linkRoutes from './linkRoutes';
 
 const routes = Router();
 

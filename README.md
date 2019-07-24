@@ -24,13 +24,13 @@ The project has, by now, those features:
 
 # Roadmap
 
-[x] Shorten URLs
-[x] Find and redirect URLs
-[ ] Create home and internal pages
-[ ] Create not found/create page
-[ ] Implement cache
-[ ] Create account
-[ ] User internal dashboard-like pages
-[ ] Analytics
-[ ] Custom URLs
-[ ] Configurable wait screen
+- [x] Shorten URLs
+- [x] Find and redirect URLs
+- [ ] Create home and internal pages
+- [ ] Create not found/create page
+- [ ] Implement cache
+- [ ] Create account
+- [ ] User internal dashboard-like pages
+- [ ] Analytics
+- [ ] Custom URLs
+- [ ] Configurable wait screen

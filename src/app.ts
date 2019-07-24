@@ -1,8 +1,8 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
-import mongoose from 'mongoose';
 import routes from './routes';
+import { dbConnect } from './config';
 
 class App {
   public express = express.application;
@@ -21,10 +21,8 @@ class App {
     this.express.use(cors());
   }
 
-  private database(): void {
-    mongoose.connect(process.env.DB_URL, {
-      useNewUrlParser: true
-    });
+  private async database(): Promise<void> {
+    dbConnect();
   }
 
   private routes(): void {

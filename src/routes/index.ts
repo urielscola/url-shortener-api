@@ -1,11 +1,11 @@
 import { Router } from 'express';
-import urlRoutes from './url';
-import codeRoutes from './code';
+import shortenRoutes from './shorten';
+import linkRoutes from './link';
 
-/* Status endpoint */
 const routes = Router();
-// routes.get(['/ping'], async (req, res) => res.status(200).send('pong'));
-routes.use('/urls/shorten', urlRoutes);
-routes.use('/', codeRoutes);
+
+routes.use('/not-found', (req, res) => res.send('not found'));
+routes.use('/api/shorten', shortenRoutes);
+routes.use('/', linkRoutes);
 
 export default routes;

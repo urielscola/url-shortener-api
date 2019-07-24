@@ -1,20 +1,15 @@
-import Url from '../models/Url';
+import LinkService from './LinkService';
 import shortid from 'shortid';
 
 class ShortenerService {
-  static async store({ fullUrl }) {
-    const existingUrl = await Url.findOne({ fullUrl });
-    if (existingUrl) {
-      return existingUrl;
-    }
+  static async store({ fullLink }): Promise<any> {
+    const existingLink = await LinkService.find({ fullLink });
+    if (existingLink) return existingLink;
 
-    const urlCode = shortid.generate();
+    const hashCode = shortid.generate();
+    const shortLink = `${process.env.PUBLIC_URL}/${hashCode}`;
 
-    return Url.create({
-      fullUrl,
-      urlCode,
-      shortUrl: `http://localhost:${process.env.PORT}/${urlCode}`
-    });
+    return LinkService.store({ fullLink, hashCode, shortLink });
   }
 }
 

@@ -14,8 +14,6 @@ class RouteValidator {
       return k;
     });
 
-    console.log(data);
-
     const validation = Joi.validate(data, schema, {
       allowUnknown: true
     });

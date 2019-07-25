@@ -1,1 +1,4 @@
-{}
+{
+  "api.error.throw": "Falha interna no servidor",
+  "api.shortener.store.not_found": "Não foi possível salvar seu link."
+}

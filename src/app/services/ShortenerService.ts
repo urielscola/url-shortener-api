@@ -1,6 +1,5 @@
 import LinkService from './LinkService';
 import shortid from 'shortid';
-
 class ShortenerService {
   static async store({ fullLink }): Promise<any> {
     const existingLink = await LinkService.find({ fullLink });

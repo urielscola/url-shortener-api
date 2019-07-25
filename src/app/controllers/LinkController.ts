@@ -1,13 +1,19 @@
-import { Request, Response } from 'express';
 import LinkService from '../services/LinkService';
 
-class CodeController {
-  static async find(req: Request, res: Response): Promise<void> {
-    const shortenedLink = await LinkService.find(req.params);
-    if (shortenedLink) return res.redirect(shortenedLink.fullLink);
+const RESOURCE = 'link';
+class LinkController {
+  static async find(req, res, next): Promise<void> {
+    try {
+      const shortenedLink = await LinkService.find(req.params);
+      if (shortenedLink) return res.redirect(shortenedLink.fullLink);
 
-    return res.redirect(`${process.env.PUBLIC_URL}/not-found`);
+      return res.redirect(`${process.env.PUBLIC_URL}/not-found`);
+    } catch (err) {
+      req.resource = RESOURCE;
+      req.method = 'find';
+      next(err);
+    }
   }
 }
 
-export default CodeController;
+export default LinkController;

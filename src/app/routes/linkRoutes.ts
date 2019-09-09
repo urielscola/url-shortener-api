@@ -5,7 +5,7 @@ import LinkSchema from '../middlewares/schemas/LinkSchema';
 const routes = Router();
 
 routes
-  .get('/', (req, res) => res.send('opa'))
-  .get('/:hashCode', LinkSchema.find, LinkController.find);
+  .get('/:hashCode', LinkSchema.find, LinkController.find)
+  .get('/', (req, res) => res.send('opa'));
 
 export default routes;

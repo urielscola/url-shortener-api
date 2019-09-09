@@ -7,7 +7,7 @@ class LinkController {
       const shortenedLink = await LinkService.find(req.params);
       if (shortenedLink) return res.redirect(shortenedLink.fullLink);
 
-      return res.redirect(`${process.env.PUBLIC_URL}/not-found`);
+      return res.redirect(`${process.env.PUBLIC_URL}/p/not-found`);
     } catch (err) {
       req.resource = RESOURCE;
       req.method = 'find';

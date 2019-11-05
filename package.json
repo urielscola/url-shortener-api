@@ -17,7 +17,7 @@
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
     "i18n": "^0.8.3",
-    "mongoose": "^5.6.5",
+    "mongoose": "^5.7.5",
     "shortid": "^2.2.14",
     "valid-url": "^1.0.9"
   },
